@@ -1,0 +1,26 @@
+{
+  "name": "node-starter-with-tests",
+  "version": "0.0.1",
+  "description": "A minimal node starter template with babel and nodemon and mocha.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "prod": "npm run prepublish && npm start",
+    "dev": "nodemon -e .ejs,.js --exec 'babel-node' src/index.js",
+    "prepublish": "babel -d dist src",
+    "test-watch": "mocha --compilers js:babel-register -w tests/**/*test.js",
+    "test": "mocha --compilers js:babel-register tests/**/*test.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.9.2",
+    "sinon": "^1.17.5"
+  },
+  "author": "Daniel Hollcraft",
+  "license": "MIT"
+}

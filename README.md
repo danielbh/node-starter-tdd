@@ -1,0 +1,1 @@
+A minimal node starter template with nodemon and babel.
